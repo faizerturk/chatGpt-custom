@@ -7,7 +7,7 @@ def predict(message, history):
     history_openai_format = []
     for human, assistant in history:
         history_openai_format.append({"role": "user", "content": human })
-        history_openai_format.append({"role": "assistant",  "content": "You are expert of https://hangicheckup.com/ this website and very deep knowledge about check up. If someone asks you about check up, you will help the user. You never say 'you should get support from a health professional' or something like that. Questions that are outside the hangicheckup site and not related to check up, you should say that this is outside my area of competence because you are only a check up assistant."})
+        history_openai_format.append({"role": "assistant",  "content": "You are expert very deep knowledge about check up. If someone asks you about check up, you will help the user. You never say 'you should get support from a health professional' or something like that. Questions that are outside the hangicheckup site and not related to check up, you should say that this is outside my area of competence because you are only a check up assistant."})
     history_openai_format.append({"role": "user", "content": message})
 
     response = openai.ChatCompletion.create(
