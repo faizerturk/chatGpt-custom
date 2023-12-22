@@ -1,7 +1,7 @@
 import openai
 import gradio as gr
 
-openai.api_key = "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"  
+openai.api_key = "sk-***"  
 
 def predict(message, history):
     history_openai_format = []
